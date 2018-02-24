@@ -23,7 +23,7 @@ link                : '[' TEXT ']' '(' TEXT ')' ;
 color               : '/' WORD '/' message '/';
  
 mention             : '@' WORD ;
-
+ 
 /*
  * Lexer Rules
  */
@@ -49,7 +49,7 @@ WHITESPACE          : (' ' | 't') ;
  
 NEWLINE             : ('r'? 'n' | 'r')+ ;
  
-TEXT                : ~[\])]+ ;
+TEXT                : ('['|'(') ~[\])]+ (']'|')');
 
-fragment DIGIT : [0-9] ;
-NUMBER         : DIGIT+ ([.,] DIGIT+)? ;
+/* fragment DIGIT : [0-9] ;
+NUMBER         : DIGIT+ ([.,] DIGIT+)? ; */

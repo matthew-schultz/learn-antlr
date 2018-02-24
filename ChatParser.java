@@ -17,7 +17,7 @@ public class ChatParser extends Parser {
 		new PredictionContextCache();
 	public static final int
 		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, T__6=7, T__7=8, SAYS=9, 
-		SHOUTS=10, WORD=11, WHITESPACE=12, NEWLINE=13, TEXT=14, NUMBER=15;
+		SHOUTS=10, WORD=11, WHITESPACE=12, NEWLINE=13, TEXT=14;
 	public static final int
 		RULE_chat = 0, RULE_line = 1, RULE_message = 2, RULE_name = 3, RULE_command = 4, 
 		RULE_emoticon = 5, RULE_link = 6, RULE_color = 7, RULE_mention = 8;
@@ -31,7 +31,7 @@ public class ChatParser extends Parser {
 	};
 	private static final String[] _SYMBOLIC_NAMES = {
 		null, null, null, null, null, null, null, null, null, "SAYS", "SHOUTS", 
-		"WORD", "WHITESPACE", "NEWLINE", "TEXT", "NUMBER"
+		"WORD", "WHITESPACE", "NEWLINE", "TEXT"
 	};
 	public static final Vocabulary VOCABULARY = new VocabularyImpl(_LITERAL_NAMES, _SYMBOLIC_NAMES);
 
@@ -621,7 +621,7 @@ public class ChatParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\21N\4\2\t\2\4\3\t"+
+		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\20N\4\2\t\2\4\3\t"+
 		"\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\3\2\6\2\26"+
 		"\n\2\r\2\16\2\27\3\2\3\2\3\3\3\3\3\3\3\3\3\3\3\4\3\4\3\4\3\4\3\4\3\4\6"+
 		"\4\'\n\4\r\4\16\4(\3\5\3\5\3\5\3\6\3\6\3\6\3\6\3\7\3\7\5\7\64\n\7\3\7"+

@@ -43,7 +43,7 @@ SAYS                : S A Y S ;
  
 SHOUTS              : S H O U T S;
 
-TEXT                : {self._input.LA(-1) == ord('[') or self._input.LA(-1) == ord('(')}? ~[])]+ ;
+TEXT                : {self._input.LA(-1) == ord('[') or self._input.LA(-1) == ord('(')}? ~[\])]+ ;
 
 WORD                : (LOWERCASE | UPPERCASE | '_')+ ;
  

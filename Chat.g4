@@ -42,14 +42,14 @@ fragment UPPERCASE  : [A-Z] ;
 SAYS                : S A Y S ;
  
 SHOUTS              : S H O U T S;
- 
+
+TEXT                : {self._input.LA(-1) == ord('[') or self._input.LA(-1) == ord('(')}? ~[])]+ ;
+
 WORD                : (LOWERCASE | UPPERCASE | '_')+ ;
  
 WHITESPACE          : (' ' | 't') ;
  
 NEWLINE             : ('r'? 'n' | 'r')+ ;
- 
-TEXT                : ('['|'(') ~[\])]+ (']'|')');
 
 /* fragment DIGIT : [0-9] ;
 NUMBER         : DIGIT+ ([.,] DIGIT+)? ; */

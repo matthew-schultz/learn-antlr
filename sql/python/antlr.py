@@ -15,7 +15,7 @@ def main(argv):
     parser = SQLiteParser(stream)
     tree = parser.SQLite()
  
-    output = open("output.html","w")
+    output = open("sqlOutput.txt","w")
     
 #    htmlSQLite = HtmlSQLiteListener(output)
 #    walker = ParseTreeWalker()

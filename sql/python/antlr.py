@@ -3,7 +3,6 @@ from antlr4 import *
 from SQLiteLexer import SQLiteLexer
 from PrintSQLiteListener import PrintSQLiteListener
 from SQLiteParser import SQLiteParser
-# from HtmlSQLiteListener import HtmlSQLiteListener
  
 def getTableName(sqlString):
     tableName = ""
@@ -11,18 +10,15 @@ def getTableName(sqlString):
 
 def main(argv):
     input = FileStream(argv[1])
-#    print(input)
     lexer = SQLiteLexer(input)
     stream = CommonTokenStream(lexer)
     parser = SQLiteParser(stream)
     tree = parser.sql_stmt()
-#    print(tree)
     output = open("sqlOutput.txt","w")
     
     SQLite = PrintSQLiteListener()
     walker = ParseTreeWalker()
-    walker.walk(SQLite, tree)
-#    print(tree)    
+    walker.walk(SQLite, tree)    
     output.close()      
 
 def test(argv):
